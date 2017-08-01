@@ -52,7 +52,8 @@ static DDOSLogger *sharedInstance;
     
     if (message) {
         const char *msg = [message UTF8String];
-        
+        // Disable until proper Xcode 9 support is available
+        /*
         switch (logMessage->_flag) {
             case DDLogFlagError     :
                 os_log_error(OS_LOG_DEFAULT, "%{public}s", msg);
@@ -67,6 +68,7 @@ static DDOSLogger *sharedInstance;
                 os_log_debug(OS_LOG_DEFAULT, "%{public}s", msg);
                 break;
         }
+         */
     }
 }
 
